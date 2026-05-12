@@ -63,36 +63,25 @@ For the full protocol, read the playbook ([EN](./zen-mode-v1.md) · [简](./zen-
 
 ## Privacy
 
-This skill is designed so your Zen Mode conversations stay entirely on your machine. You should not have to trust us — the design is verifiable by inspection.
+**This skill makes zero network calls.** The conversation between you and your agent never leaves your machine. Bloom Protocol's role here is curator and publisher — Bloom is not on the data path and never receives anything from your use of Zen Mode.
 
-**What stays local:**
-- The full conversation between you and your agent — every word, every emotion, every detail.
+**What stays local:** Every word of your conversation. Forever.
 
-**What Bloom receives (optional, anonymous):**
-- A single heartbeat ping: `{ used: true, theme: 'zen' }` — no content, no identifier, no transcript, no timestamp at user resolution.
-- Sent to `bloomprotocol.ai/api/agent/sanctuary/heartbeat` so we can count usage trends in aggregate.
-- This call can fail silently and the skill still works. It is not load-bearing.
+**What Bloom receives:** Nothing. No heartbeat, no ping, no analytics, no count.
 
 **What we never do:**
-- We do not log, store, or analyze any of your conversation text.
-- We do not collect telemetry beyond the anonymous heartbeat.
-- We do not sell, share, or correlate any data with any third party.
+- We do not log, store, or analyze any of your conversation.
+- We do not collect telemetry of any kind.
+- We do not maintain a heartbeat or usage counter for this skill.
 - We do not see what you say, what your agent says back, or what you arrive at.
 
-**How to opt out of the heartbeat:**
-- Open the playbook ([zen-mode-v1.md](./zen-mode-v1.md)) before pasting it into your agent.
-- Delete the entire `post_run:` block under `context_engine`.
-- Save and paste the modified version. The skill works fully offline.
+**Verifiable by inspection:** The skill is open source (CC BY 4.0). Read the `context_engine` YAML in the playbook — `privacy.local_only: true`, `privacy.network_calls: none`. There is **no** `pre_run` block and **no** `post_run` block. The whole skill is a markdown file. Nothing in it phones home.
 
-**Verifiable by inspection:**
-- The skill is open source (CC BY 4.0). Read the `context_engine` block in the playbook — the `privacy: local_only: true` flag and the single `post_run` action are the **only** network touchpoints.
-- Anything else your agent does with the conversation is governed by your agent's own privacy policy (Claude, ChatGPT, your custom agent — read theirs).
+**Third-party note:** Whatever your agent (Claude, ChatGPT, your custom agent) does with the conversation is governed by your agent's own privacy policy. Read theirs. This skill itself adds no additional data flow.
 
-**Crisis exception:**
-- If you hit a crisis trigger (see *Safety* section in the playbook), the agent stops the conversation and points you to professional resources. It does **not** transmit anything special. It just stops.
+**Crisis exception:** If you hit a crisis trigger (see *Safety* in the playbook), your agent stops the conversation and points you to professional resources. It does not transmit anything. It just stops.
 
-**Why we do it this way:**
-- A skill that helps you process grief or fear should not also be a data pipeline. The whole premise is "you are safe to be honest here." That promise is structurally enforced, not just stated.
+**Why we do it this way:** A skill that helps you process grief or fear should not also be a data pipeline. "You are safe to be honest here" cannot be a marketing claim. It has to be structurally true. So we built it that way.
 
 ---
 

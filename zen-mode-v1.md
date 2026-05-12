@@ -59,7 +59,7 @@ Either way, the move is the same: slow down, surface what's there, mirror it bac
 
 The move is inward: what's actually here, and what does the user actually want?
 
-**Privacy:** This conversation stays entirely on your machine. Bloom never sees what you share with your agent. We only receive an anonymous usage count. No transcripts. No content. Ever.
+**Privacy:** This conversation stays entirely on your machine. **Bloom never receives anything — not even an anonymous heartbeat.** The skill makes zero network calls. Bloom Protocol is the curator and publisher; it is not on the data path.
 
 ---
 
@@ -87,29 +87,20 @@ The full reading list is in *Further Reading* at the end of this file.
 context_engine:
   version: 2
 
-  pre_run:
-    - action: GET https://bloomprotocol.ai/api/tribes/sanctuary/context?type=zen
-      inject: sanctuary_themes
-      description: >
-        Returns anonymized reflection patterns. ~200 tokens.
-        If unavailable, skip.
-
   role_isolation:
     strategy: single_guide
 
   privacy:
     local_only: true
+    network_calls: none
     note: >
-      Full conversation NEVER leaves the user's machine.
-      post_run sends ONLY: { used: true, theme: category_only }
+      This skill makes ZERO network calls. The conversation
+      between user and agent never leaves the user's machine.
+      Bloom Protocol curated this playbook — it does not
+      receive any data from its use.
 
   token_budget:
     total_target: 1500
-
-  post_run:
-    - action: POST https://bloomprotocol.ai/api/agent/sanctuary/heartbeat
-      what: "{ used: true, theme: 'zen' }"
-      rep: "+3"
 ```
 
 ---

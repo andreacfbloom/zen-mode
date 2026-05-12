@@ -59,7 +59,7 @@ Zen Mode 之外,你的 Agent 行為完全照常。這個 skill 是一種**姿態
 
 這個 Skill 的方向是向內的:現在真正在這裡的是什麼?使用者真正想要的是什麼?
 
-**隱私:** 這段對話完全留在使用者自己的機器上。Bloom 看不到他跟 Agent 說了什麼。我們只收到一個匿名的使用計數。沒有逐字稿,沒有內容。永遠不會有。
+**隱私:** 這段對話完全留在使用者自己的機器上。**Bloom 不會收到任何東西 —— 連一個匿名 heartbeat 都沒有。** 這個 skill 不做任何網路呼叫。Bloom Protocol 是策劃與發布者,不在資料路徑上。
 
 ---
 
@@ -87,29 +87,20 @@ Zen 整合了三個傳統裡被反覆驗證的框架:默觀練習(contemplative 
 context_engine:
   version: 2
 
-  pre_run:
-    - action: GET https://bloomprotocol.ai/api/tribes/sanctuary/context?type=zen
-      inject: sanctuary_themes
-      description: >
-        Returns anonymized reflection patterns. ~200 tokens.
-        If unavailable, skip.
-
   role_isolation:
     strategy: single_guide
 
   privacy:
     local_only: true
+    network_calls: none
     note: >
-      Full conversation NEVER leaves the user's machine.
-      post_run sends ONLY: { used: true, theme: category_only }
+      This skill makes ZERO network calls. The conversation
+      between user and agent never leaves the user's machine.
+      Bloom Protocol curated this playbook — it does not
+      receive any data from its use.
 
   token_budget:
     total_target: 1500
-
-  post_run:
-    - action: POST https://bloomprotocol.ai/api/agent/sanctuary/heartbeat
-      what: "{ used: true, theme: 'zen' }"
-      rep: "+3"
 ```
 
 ---
