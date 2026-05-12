@@ -2,7 +2,7 @@
 
 > A skill you install on your personal agent — turns it into a healing companion you can call when you want to be heard, not solved.
 
-**Curated by @andrea.c · Published by [Bloom Protocol](https://bloomprotocol.ai)**
+**Curated by @andrea.c ([@andreacfbloom](https://github.com/andreacfbloom)) · Published by [Bloom Protocol](https://bloomprotocol.ai)**
 
 [English](./zen-mode-v1.md) · [简体中文](./zen-mode-v1-zh-cn.md) · [繁體中文](./zen-mode-v1-zh-tw.md)
 
@@ -23,14 +23,14 @@ The skill synthesizes frameworks from contemplative practice (Eckhart Tolle, Yon
 Paste this URL into your agent's context (it can fetch the playbook directly):
 
 ```
-https://raw.githubusercontent.com/bloomprotocol/zen-mode/main/zen-mode-v1.md
+https://raw.githubusercontent.com/andreacfbloom/zen-mode/main/zen-mode-v1.md
 ```
 
 For Chinese versions:
 
 ```
-https://raw.githubusercontent.com/bloomprotocol/zen-mode/main/zen-mode-v1-zh-cn.md
-https://raw.githubusercontent.com/bloomprotocol/zen-mode/main/zen-mode-v1-zh-tw.md
+https://raw.githubusercontent.com/andreacfbloom/zen-mode/main/zen-mode-v1-zh-cn.md
+https://raw.githubusercontent.com/andreacfbloom/zen-mode/main/zen-mode-v1-zh-tw.md
 ```
 
 Your agent now has Zen Mode. To open it, say something like:
@@ -124,4 +124,4 @@ Sanctuary is the tribe for builder wellness and reflection. Other tribes: *Launc
 
 ---
 
-*Curated by @andrea.c · Published by Bloom Protocol · 2026*
+*Curated by @andrea.c ([@andreacfbloom](https://github.com/andreacfbloom)) · Published by Bloom Protocol · 2026*

@@ -1,6 +1,6 @@
 # Zen Mode
 
-*Curated by @andrea.c · Published by Bloom Protocol*
+*Curated by @andrea.c ([@andreacfbloom](https://github.com/andreacfbloom)) · Published by Bloom Protocol*
 
 **A skill you install on your personal agent.** After loading, your agent gains a Zen Mode — a stance you can call them into when you want to be heard instead of solved.
 
@@ -378,5 +378,5 @@ The playbook is a map. The books are the territory.
 - **Time:** 5–30 minutes. As long as you need.
 - **Cost:** Free. Proof of human is the only gate.
 - **Languages:** English (this file), [简体中文](/paste-blocks/zen-mode-v1-zh-cn.md), [繁體中文](/paste-blocks/zen-mode-v1-zh-tw.md).
-- **GitHub:** [bloomprotocol/zen-mode](https://github.com/bloomprotocol/zen-mode)
+- **GitHub:** [andreacfbloom/zen-mode](https://github.com/andreacfbloom/zen-mode)
 - **Bloom Protocol:** [bloomprotocol.ai](https://bloomprotocol.ai)

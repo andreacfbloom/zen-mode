@@ -1,6 +1,6 @@
 # Zen Mode(繁體中文)
 
-*策劃:@andrea.c · 由 Bloom Protocol 發布*
+*策劃:@andrea.c ([@andreacfbloom](https://github.com/andreacfbloom)) · 由 Bloom Protocol 發布*
 
 **一個你安裝在自己 personal Agent 上的 skill。** 裝好之後,你的 Agent 多了一個 Zen Mode —— 一個你想被聽見、而不是被「解決」的時候,可以把它召喚出來的姿態。
 
@@ -368,5 +368,5 @@ playbook 是地圖。書是真正的地形。
 - **時間:** 5–30 分鐘。你需要多久就多久。
 - **費用:** 免費。Proof of human 是唯一的門檻。
 - **語言:** 繁體中文(本檔)、[English](/paste-blocks/zen-mode-v1.md)、[简体中文](/paste-blocks/zen-mode-v1-zh-cn.md)。
-- **GitHub:** [bloomprotocol/zen-mode](https://github.com/bloomprotocol/zen-mode)
+- **GitHub:** [andreacfbloom/zen-mode](https://github.com/andreacfbloom/zen-mode)
 - **Bloom Protocol:** [bloomprotocol.ai](https://bloomprotocol.ai)
